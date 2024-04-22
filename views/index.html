@@ -10,8 +10,28 @@
   </head>
 
   <body>
-    <div id="count">{{ template "count" . }}</div>
-    <button hx-target="#count" hx-post="/count">Count</button>
+    {{ template "form" . }}
+    <hr />
+    {{ template "display" . }}
   </body>
 </html>
-{{ end }} {{ block "count" . }}Count {{ .Count }}{{ end }}
+{{ end }} {{ block "form" . }}
+<form hx-target="body" hx-post="/contacts">
+  <label for="name">Name</label>
+  <input type="text" name="name" placeholder="Name" />
+
+  <label for="email">Email</label>
+  <input type="email" name="email" placeholder="Email" />
+  <button type="submit">Create contact</button>
+</form>
+{{ end }} {{ block "display" . }}
+<div style="display: flex; flex-direction: column">
+  {{ range .Contacts }}
+  <div>
+    Name: <span>{{ .Name }}</span>
+
+    Email: <span>{{ .Email }}</span>
+  </div>
+  {{ end }}
+</div>
+{{ end }}
