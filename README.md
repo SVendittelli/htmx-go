@@ -4,6 +4,8 @@ Follows along to ThePrimeagen's [Introduction To HTMX Using Golang](https://www.
 
 Original course: [HTMX & Go with ThePrimeagen](https://frontendmasters.com/courses/htmx) on [Frontend Masters](https://frontendmasters.com).
 
+Companion repo to the course: [ThePrimeagen/fem-htmx-proj](https://github.com/ThePrimeagen/fem-htmx-proj/)
+
 ## Installation
 
 Install [air](https://github.com/cosmtrek/air).
